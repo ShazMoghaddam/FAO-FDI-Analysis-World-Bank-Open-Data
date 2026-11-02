@@ -1,4 +1,4 @@
 -r requirements.txt
 pytest>=8
 nbconvert>=7
-ipykernel>=6
+ipykernel>=7.4.0
