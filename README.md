@@ -69,7 +69,7 @@ Germany's other 20 years add up to $194m.
 
 ## Run it yourself
 
-You'll need Python 3.10 or newer.
+You'll need Python 3.11 or newer.
 
 ```sh
 git clone https://github.com/ShazMoghaddam/FAO-FDI-Analysis-World-Bank-Open-Data.git
