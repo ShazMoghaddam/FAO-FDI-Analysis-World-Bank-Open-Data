@@ -1,0 +1,110 @@
+iso3,country,continent
+ALB,Albania,Europe
+DZA,Algeria,Africa
+ARG,Argentina,Americas
+ARM,Armenia,Asia
+AUS,Australia,Oceania
+AUT,Austria,Europe
+BHR,Bahrain,Asia
+BGD,Bangladesh,Asia
+BEL,Belgium,Europe
+BLZ,Belize,Americas
+BTN,Bhutan,Asia
+BOL,Bolivia,Americas
+BIH,Bosnia and Herzegovina,Europe
+BRA,Brazil,Americas
+BGR,Bulgaria,Europe
+KHM,Cambodia,Asia
+CHL,Chile,Americas
+CHN,China,Asia
+COL,Colombia,Americas
+CRI,Costa Rica,Americas
+CIV,Cote d'Ivoire,Africa
+HRV,Croatia,Europe
+CYP,Cyprus,Asia
+CZE,Czechia,Europe
+DNK,Denmark,Europe
+DJI,Djibouti,Africa
+ECU,Ecuador,Americas
+EGY,"Egypt, Arab Rep.",Africa
+SLV,El Salvador,Americas
+EST,Estonia,Europe
+ETH,Ethiopia,Africa
+FJI,Fiji,Oceania
+FIN,Finland,Europe
+FRA,France,Europe
+GEO,Georgia,Asia
+DEU,Germany,Europe
+GHA,Ghana,Africa
+GRC,Greece,Europe
+GTM,Guatemala,Americas
+HND,Honduras,Americas
+HUN,Hungary,Europe
+ISL,Iceland,Europe
+IND,India,Asia
+IDN,Indonesia,Asia
+IRN,"Iran, Islamic Rep.",Asia
+IRL,Ireland,Europe
+ISR,Israel,Asia
+ITA,Italy,Europe
+JPN,Japan,Asia
+JOR,Jordan,Asia
+KAZ,Kazakhstan,Asia
+KEN,Kenya,Africa
+KOR,"Korea, Rep.",Asia
+KGZ,Kyrgyz Republic,Asia
+LAO,Lao PDR,Asia
+LVA,Latvia,Europe
+LTU,Lithuania,Europe
+MDG,Madagascar,Africa
+MWI,Malawi,Africa
+MYS,Malaysia,Asia
+MLT,Malta,Europe
+MUS,Mauritius,Africa
+MEX,Mexico,Americas
+MDA,Moldova,Europe
+MNG,Mongolia,Asia
+MAR,Morocco,Africa
+MOZ,Mozambique,Africa
+MMR,Myanmar,Asia
+NPL,Nepal,Asia
+NLD,Netherlands,Europe
+NZL,New Zealand,Oceania
+NIC,Nicaragua,Americas
+NGA,Nigeria,Africa
+MKD,North Macedonia,Europe
+NOR,Norway,Europe
+PAK,Pakistan,Asia
+PLW,Palau,Oceania
+PAN,Panama,Americas
+PRY,Paraguay,Americas
+PER,Peru,Americas
+PHL,Philippines,Asia
+POL,Poland,Europe
+PRT,Portugal,Europe
+ROU,Romania,Europe
+RUS,Russian Federation,Europe
+RWA,Rwanda,Africa
+SAU,Saudi Arabia,Asia
+SRB,Serbia,Europe
+SVK,Slovak Republic,Europe
+SVN,Slovenia,Europe
+ESP,Spain,Europe
+SWE,Sweden,Europe
+SYR,Syrian Arab Republic,Asia
+TWN,"Taiwan, China",Asia
+TJK,Tajikistan,Asia
+TZA,Tanzania,Africa
+THA,Thailand,Asia
+TUN,Tunisia,Africa
+TUR,Turkiye,Asia
+UGA,Uganda,Africa
+UKR,Ukraine,Europe
+ARE,United Arab Emirates,Asia
+GBR,United Kingdom,Europe
+USA,United States,Americas
+URY,Uruguay,Americas
+UZB,Uzbekistan,Asia
+VUT,Vanuatu,Oceania
+VNM,Viet Nam,Asia
+ZMB,Zambia,Africa

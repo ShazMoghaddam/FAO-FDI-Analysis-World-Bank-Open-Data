@@ -1,0 +1,16 @@
+{
+  "indicator": "FAO_FDI_23080",
+  "name": "FDI inflows to Agriculture, Forestry and Fishing",
+  "published_by": "World Bank Data360",
+  "published_at": "https://data360.worldbank.org",
+  "compiled_by": "Food and Agriculture Organization of the United Nations (FAOSTAT, Foreign Direct Investment)",
+  "compiled_at": "https://www.fao.org/faostat/en/#data/FDI",
+  "raw_file": "data/raw/FAO_FDI.csv",
+  "raw_file_added_to_repo": "2026-01-14",
+  "frequency": "annual",
+  "units": {
+    "USD": "Millions of US dollars, current prices",
+    "USD_K_2015": "Millions of US dollars, constant 2015 prices"
+  },
+  "continents": "data/countries.csv was generated once from the ISO3 codes with the country_converter package (continent classification). 'America' is relabelled 'Americas'."
+}

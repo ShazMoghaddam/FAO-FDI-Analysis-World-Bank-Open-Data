@@ -1,183 +1,119 @@
-# FAO FDI Analysis – World Bank Open Data
+# Who Invests in the World's Farms?
 
-## 📌 Project Overview
+**An analysis of foreign direct investment in agriculture, forestry and fishing, using World Bank open data for 108 countries from 2000 to 2023.**
 
-This project presents an **end‑to‑end data science workflow** using **Foreign Direct Investment (FDI) inflows to Agriculture, Forestry, and Fishing**, sourced from **World Bank Open Data (FAO indicators)**.
+[![Checks](https://github.com/ShazMoghaddam/FAO-FDI-Analysis-World-Bank-Open-Data/actions/workflows/checks.yml/badge.svg)](https://github.com/ShazMoghaddam/FAO-FDI-Analysis-World-Bank-Open-Data/actions/workflows/checks.yml)
+[![Charts: bezel-charts](https://img.shields.io/pypi/v/bezel-charts?label=charts%3A%20bezel-charts&color=16A884)](https://pypi.org/project/bezel-charts/)
+[![MIT licence](https://img.shields.io/badge/licence-MIT-D99A0E)](LICENSE)
 
-The purpose of this repository is to **demonstrate practical data science skills**—from data cleaning and exploratory data analysis (EDA) to visualisation, basic machine learning, and insight generation—using a real‑world public dataset.
+Headlines about money pouring into or fleeing from global agriculture usually rest on a few big totals. This project
+looks underneath them: who actually received the money, what drove the swings, and which numbers can't be trusted at face
+value.
 
-This project is intentionally designed to be **clear, interpretable, and recruiter‑friendly**, making it suitable for a **junior data science / Python portfolio**.
+<p align="center">
+  <img src="charts/tile-total.svg" width="270" alt="Yearly inflows across comparable countries from 2005 to 2021, ending at 4.2 billion dollars">
+  <img src="charts/tile-top-two.svg" width="270" alt="Gauge showing China and Indonesia received 43 percent of all money">
+  <img src="charts/tile-indonesia.svg" width="270" alt="Yearly inflows to Indonesia from 2005 to 2021, ending slightly below zero">
+</p>
 
----
-
-## 📊 Data Source
-
-* **Provider**: World Bank Open Data
-* **Dataset**: FAO – FDI inflows to Agriculture, Forestry and Fishing
-* **Frequency**: Annual
-* **Coverage**: Multiple countries and years
-* **Unit of Measurement**: Millions (USD)
-
-The raw dataset is provided as a CSV file and includes both **metadata** and **observational values**.
-
----
-
-## 🛠 Tools & Libraries Used
-
-* **Python**
-* **pandas** – data loading, cleaning, and transformation
-* **NumPy** – numerical operations
-* **Matplotlib / Seaborn** – data visualisation
-* **scikit‑learn** – machine learning (linear regression)
+> **Every chart here is drawn with [bezel-charts](https://pypi.org/project/bezel-charts/), an open-source Python library
+> created by Shaz Moghaddam, the author of this project.** It turns pandas data into clean, self-contained SVG charts.
 
 ---
 
-## 🔍 Project Workflow
+## Key findings
 
-### 1. Data Loading
+<!-- key-findings:start -->
+### Investment surged, then fell back
 
-* Imported the CSV file using `pandas.read_csv()`
-* Inspected the dataset structure using `.head()`, `.info()`, and `.describe()`
+Across the 41 countries that reported every year, yearly inflows grew from a low of **$2.9bn** in 2005 to
+**$9.9bn** in 2015, then dropped 73% to $2.7bn in 2020.
 
-**Goal:** Understand column structure, data types, and data quality.
+![Inflows across comparable countries, peaking in 2015](charts/comparable-trend.svg)
 
----
+### One country explains most of the fall
 
-### 2. Data Cleaning & Preparation
+Indonesia alone accounts for **69%** of the fall from 2015 to 2020. Everyone outside
+Indonesia and China was back at $3.5bn by 2021, level with $3.5bn in 2015.
 
-**Actions taken:**
+![Indonesia, China and everyone else over time](charts/who-drove-it.svg)
 
-* Selected only relevant columns:
+### Two countries took 43% of the money
 
-  * Country name
-  * Year
-  * FDI inflow value
-* Renamed columns for clarity
-* Converted year and FDI values to numeric types
-* Removed missing and invalid records
+China and Indonesia received **43%** of all money across 108 countries. The bottom 54
+countries shared **2.7%**.
 
-**Reasoning:**
-The original dataset contains extensive metadata. Reducing it to essential analytical fields improves clarity, performance, and interpretability.
+![Share of money received by China, Indonesia and the rest](charts/concentration.svg)
 
----
+### One number looks like a global boom
 
-### 3. Exploratory Data Analysis (EDA)
+A single figure, Germany in 2012, is **$13.8bn**, or 66% of everything reported that year.
+Germany's other 20 years add up to $194m.
 
-EDA was conducted to understand overall trends, distributions, and country‑level patterns.
+![All reported inflows by year, with 2012 towering over the rest](charts/one-figure.svg)
+<!-- key-findings:end -->
 
-**Key EDA steps:**
+**[Read all seven findings, and what the data can't tell you →](findings/README.md)**
 
-* Aggregated global FDI inflows by year
-* Identified top countries by total FDI received
-* Examined individual country trends over time
-
-**Purpose:**
-
-* Detect long‑term trends
-* Identify dominant contributors
-* Understand variation across countries
-
----
-
-### 4. Data Visualisation
-
-The project includes **2–3 clear, eye‑catching visualisations**:
-
-1. **Global FDI Trend Over Time**
-
-   * Line chart showing total global FDI inflows per year
-
-2. **Top 10 Countries by Total FDI**
-
-   * Bar chart highlighting countries with the highest cumulative inflows
-
-3. **Country‑Level Trend Analysis**
-
-   * Line chart illustrating FDI changes for a selected country
-
-**Design focus:**
-
-* Clean layout
-* Clear axis labels
-* Readable titles
-* Portfolio‑appropriate visuals
+| # | Finding | |
+|---|---|---|
+| 1 | Investment surged, then fell back | The trend across countries that reported every year |
+| 2 | One country explains most of the fall | Indonesia, China and everyone else |
+| 3 | One number looks like a global boom | Why Germany in 2012 is handled separately |
+| 4 | Two countries took most of the money | How concentrated it all is |
+| 5 | Asia dominates, Africa barely registers | The picture by continent, and its gaps |
+| 6 | Money leaves as well as arrives | How often more money flows out than in |
+| 7 | Past values alone don't forecast this | A fair test of two simple forecasts |
 
 ---
 
-### 5. Insight Generation
+## Run it yourself
 
-From the analysis, several insights emerged:
+You'll need Python 3.10 or newer.
 
-* Global agricultural FDI shows **cyclical patterns**, often influenced by global economic conditions
-* A small number of countries receive a **disproportionate share** of total inflows
-* Country‑specific trends vary significantly, reflecting differences in policy, economic stability, and investment climate
+```sh
+git clone https://github.com/ShazMoghaddam/FAO-FDI-Analysis-World-Bank-Open-Data.git
+cd FAO-FDI-Analysis-World-Bank-Open-Data
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements-dev.txt
 
----
+python data/prepare.py      # raw download to tidy table
+python findings/build.py    # charts and report
+pytest                      # checks the data and the numbers
+```
 
-### 6. Machine Learning Application
+Or open [`notebooks/fdi_analysis.ipynb`](notebooks/fdi_analysis.ipynb) for the same analysis with the working shown.
 
-A **simple linear regression model** was implemented to demonstrate a basic ML workflow.
-
-**Method:**
-
-* Selected one country as a case study
-* Used **Year** as the independent variable
-* Predicted **FDI inflows** as the target variable
-
-**Steps:**
-
-* Train/test split
-* Model training using `LinearRegression`
-* Evaluation using Mean Squared Error (MSE) and R² score
-
-**Note:**
-This model is **illustrative**, not predictive. Economic time‑series data typically require more advanced techniques.
-
----
-
-## ⚠️ Limitations
-
-* FDI is influenced by many external factors (policy, GDP, geopolitics) not included in the dataset
-* Linear regression oversimplifies temporal dynamics
-* Missing macroeconomic indicators limit explanatory power
-
----
-
-## ✅ Conclusion
-
-This project demonstrates the ability to:
-
-* Work with real‑world public datasets
-* Clean and structure complex data
-* Perform exploratory and visual analysis
-* Apply basic machine learning techniques
-* Communicate insights clearly and professionally
-
-It is designed to showcase **core data science competencies** in a concise and reproducible manner.
-
----
-
-## 🚀 Future Improvements
-
-* Integrate macroeconomic indicators (GDP, inflation)
-* Apply time‑series models (ARIMA, Prophet)
-* Add interactive visualisations (Plotly)
-* Build a lightweight Streamlit dashboard
-
----
-
-## 📁 Repository Structure (Suggested)
+## What's in the repo
 
 ```
 ├── data/
-│   └── FAO_FDI.csv
-├── notebooks/
-│   └── fdi_analysis.ipynb
-├── README.md
+│   ├── raw/FAO_FDI.csv       The World Bank download, untouched
+│   ├── prepare.py            Raw file to tidy table
+│   ├── fdi_inflows.csv       One row per country and year
+│   ├── countries.csv         Each country's continent
+│   └── sources.json          Where everything came from
+├── findings/
+│   ├── analysis.py           Every calculation, as small functions
+│   ├── charts.py             Every chart
+│   ├── build.py              Writes the charts and the report
+│   └── README.md             The full report
+├── notebooks/fdi_analysis.ipynb
+├── charts/                   The SVG charts
+├── tests/                    Checks on the data and the findings
+└── .github/                  Automatic checks and dependency updates
 ```
+
+## Data
+
+The figures are the **FDI inflows to Agriculture, Forestry and Fishing** indicator (`FAO_FDI_23080`), compiled by the Food
+and Agriculture Organization of the United Nations and published through
+[World Bank Data360](https://data360.worldbank.org). The snapshot in this repo was added in January 2026.
+[`data/sources.json`](data/sources.json) has the details.
+
+Code and content in this repo are [MIT licensed](LICENSE). The data remains subject to its publishers' terms.
 
 ---
 
-## 📬 Contact
-
-For questions, feedback, or collaboration, feel free to connect via GitHub.
+Created by **Shaz Moghaddam** · London
+[Website](https://shazmoghaddam.github.io) · [LinkedIn](https://www.linkedin.com/in/shazmoghaddam)
